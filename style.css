@@ -18,6 +18,9 @@ body {
     /* background: url("assets/images/leftScreen2.png")  no-repeat;
     background-size: cover; */
 }
+.mobileScreen {
+    display: none;
+}
 .leftScreen {
     width: 43vw;
     z-index: 2;
@@ -37,31 +40,9 @@ body {
     /* border: 1px solid black; */
     /* background-color: chartreuse; */
     z-index: 0;
-    padding-left: 100px;
+    padding-left: 6%;
     padding-top: 25px;
     margin-bottom: 50px;
-}
-.buttonContainer {
-    display: flex;
-    justify-content: flex-end;
-}
-.button {
-    background: #000000;
-    border-radius: 5px;
-    font-family: Source Sans Pro;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 19px;
-    letter-spacing: 0.3em;
-    color: #FFFFFF;
-    padding: 15px 30px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    border: none;
-    cursor: pointer;
 }
 .header {
     font-family: Source Sans Pro;
@@ -82,7 +63,7 @@ body {
     line-height: 20px;
     color: #2E2E2E;
 }
-.collectionHeader {
+.collectionHeader1 {
     height: 25px;
     font-family: Source Sans Pro;
     font-style: normal;
@@ -94,6 +75,16 @@ body {
     margin-top: 100px;
     margin-bottom: 30px;
 }
+.collectionHeader2 {
+    display: none;
+}
+.collectionsContainerHeader {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 65px;
+}
 .collectionsContainer {
     display: flex;
     justify-content: space-between;
@@ -101,8 +92,11 @@ body {
     width: 100%;
     margin-bottom: 65px;
 }
+.cardImg {
+    width: 100%;
+}
 .card {
-    width: 190px;
+    width: 220px;
     height: 303.61px;
     background: #FFFFFF;
     box-shadow: 0px 4px 54px rgba(0, 0, 0, 0.15);
@@ -189,7 +183,6 @@ body {
     -moz-border-radius: 12px;
     -ms-border-radius: 12px;
     -o-border-radius: 12px;
-    word-wrap: break-word;
 }
 .safetyCardHeader {
     display: flex;
@@ -457,4 +450,399 @@ body {
     color: #FFFFFF;
     cursor: pointer;
     text-align: center;
+}
+
+@media screen and (max-width: 1450px) {
+    .card {
+        width: 21%;
+        height: 100%;
+    }
+    .cardInfo {
+        padding: 0;
+        padding-top: 10px;
+    }
+    .cardHeader {
+        font-size: 13px;
+    }
+    .carfFooter {
+        margin-top: 10px;
+    }
+    .priceContainer {
+    }
+    .priceIcon {
+    }
+    .price {
+        font-size: 13px;
+    }
+    .lernButton {
+        font-size: 9px;
+        padding: 6px 13px;
+    }
+}
+  
+
+@media screen and (max-width: 1100px) {
+    .card {
+        width: 180px;
+    }
+    .cardHeader {
+        font-size: 14px;
+    }
+    .price {
+        font-size: 12px;
+    }
+    .lernButton {
+        font-size: 13px;
+        padding: 3px 8px;
+    }
+}
+  
+@media screen and (max-width: 980px) {
+    .collectionsContainer {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 65px;
+    }
+
+    .modal-content {
+        width: 85%;
+    }
+    .modal-body {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        margin-top: 30px;
+    }
+    .modal-left {
+        width: 90%;
+    }
+    .modal-right {
+        width: 95%;
+        padding-left: 0;
+    }
+    .full-img {
+        width: 100%;
+    }
+    .all-img {
+        width: 100%;
+    }
+    .modal-footer {
+        margin-top: 30px;
+        width: 100%;
+        display: none; 
+    }
+    .modal-footer-title {
+        font-size: 13px;
+    }
+    .modal-footer-inputs {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .input {
+        width: 30%;
+        min-width: 0;
+        text-align: center;
+        border: 0;
+        border-bottom: 1px solid black;
+        padding: 0px;
+        outline: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .root {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        max-width: 100vw;
+        min-height: 100vh;
+    }
+    .leftContainer {
+        position: static;
+        width: 100vw;
+        height: 100%;
+        z-index: 0;
+    }
+    .leftScreen {
+        display: none;
+    }
+    .mobileScreen {
+        display: inline-block;
+        width: 100%;
+    }
+    .rightContainer {
+        position: static;
+        left: 0;
+        width: 100vw;
+        z-index: 0;
+        padding-left: 0;
+        padding-top: 0;
+        padding: 30px;
+        margin-bottom: 50px;
+    }
+    .logo {
+        position: absolute;
+        left: 45px;
+        top: 60px;
+        width: 70%;
+        z-index: 3;
+    }
+
+
+    .header {
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-size: 40px;
+        line-height: 50px;
+        color: #2E2E2E;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        width: 100%;
+        text-align: center;
+    }
+    .title {
+        width: 100%;
+        text-align: justify;
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        color: #2E2E2E;
+        margin-bottom: 30px;
+    }
+    .collectionHeader1 {
+        display: none;
+    }
+    .collectionHeader2 {
+        display: inline-block;
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: 0.3em;
+        color: #000000;
+        margin-top: 0;  
+        margin-bottom: 10px;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .collectionsContainerHeader {
+        display: none;
+    }
+
+
+    .safety {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .safetyCard {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .cardInfo {
+        padding: 10px;
+    }
+    .cardHeader {
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 19px;
+        text-align: center;
+        color: #000000;
+    }
+    .cardImg {
+        /* width: 90%; */
+    }
+    .carfFooter {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+    .priceContainer {
+        display: flex;
+        align-items: center;
+    }
+    .priceIcon {
+        margin-right: 5px;
+    }
+    .price {
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 19px;
+        color: rgba(0, 0, 0, 0.7);
+        
+    }
+    .lernButton {
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background: #000000;
+        border-radius: 3px;
+        padding: 3px 8px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+        border: none;
+        cursor: pointer;
+}
+}
+
+@media screen and (max-width: 500px) {
+    .collectionsContainer {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 65px;
+    }
+    .card {
+        width: 90%;
+        height: 100%;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 54px rgba(0, 0, 0, 0.15);
+        border-radius: 12px;
+        padding: 12px;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+        margin-bottom: 37px;
+    }
+    .cardInfo {
+        padding: 10px;
+    }
+    .cardHeader {
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 19px;
+        text-align: center;
+        color: #000000;
+    }
+    .cardImg {
+        /* width: 90%; */
+    }
+    .carfFooter {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+    .priceContainer {
+        display: flex;
+        align-items: center;
+    }
+    .priceIcon {
+        margin-right: 5px;
+    }
+    .price {
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 19px;
+        color: rgba(0, 0, 0, 0.7);
+        
+    }
+    .lernButton {
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 14px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background: #000000;
+        border-radius: 2px;
+        padding: 6px 13px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+        border: none;
+        cursor: pointer;
+    }
+    .modal-footer-title {
+        font-size: 10px;
+    }
+    .modal-footer-inputs {
+        height: 90px;
+    }
+    .input {
+        width: 70%;
+    }
+    .confirmButton {
+        margin-top: 30px;
+        background: #000000;
+        border-radius: 5px;
+        padding: 13px 10px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border: none;
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 19px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        cursor: pointer;
+        text-align: center;
+    }
+    .bookingButton {
+        margin-top: 30px;
+        background: #000000;
+        border-radius: 5px;
+        padding: 13px 10px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border: none;
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 19px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+    .modal-end-title {
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 23px;
+        text-align: center;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: #000000;
+        text-align: center;
+        width: 80%;
+    }
 }
